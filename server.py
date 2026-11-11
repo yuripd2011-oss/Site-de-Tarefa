@@ -308,7 +308,7 @@ class OrganizerHandler(BaseHTTPRequestHandler):
         path = urlsplit(self.path).path
         if path == "/":
             try:
-                content = (ROOT / "Organizador.html").read_bytes()
+                content = (ROOT / "index.html").read_bytes()
             except OSError:
                 self.error(HTTPStatus.INTERNAL_SERVER_ERROR, "Não foi possível carregar a página.")
                 return
